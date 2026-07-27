@@ -47,6 +47,8 @@ public class SecurityConfig {
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/videos/public/**").permitAll()
                 .requestMatchers("/videos/stream/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/videos/{id}").permitAll()
+                .requestMatchers(HttpMethod.GET, "/videos/user/{userId}").permitAll()
                 .requestMatchers("/categories/**").permitAll()
                 .requestMatchers(HttpMethod.GET, "/users/{id}").permitAll()
                 .requestMatchers("/comments/video/**").permitAll()
