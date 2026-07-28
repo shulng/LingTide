@@ -69,6 +69,12 @@ const routes = [
     meta: { title: '视频管理', requiresAdmin: true }
   },
   {
+    path: '/admin/categories',
+    name: 'AdminCategories',
+    component: () => import('@/views/admin/Categories.vue'),
+    meta: { title: '分类管理', requiresAdmin: true }
+  },
+  {
     path: '/search',
     name: 'Search',
     component: () => import('@/views/Search.vue'),

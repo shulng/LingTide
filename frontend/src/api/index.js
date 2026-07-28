@@ -81,9 +81,16 @@ export default {
   admin: {
     getStats: () => request.get('/admin/stats'),
     getUsers: (params) => request.get('/admin/users', { params }),
+    createUser: (params) => request.post('/admin/users', null, { params }),
+    deleteUser: (id) => request.delete(`/admin/users/${id}`),
     updateUserStatus: (id, status) => request.put(`/admin/users/${id}/status`, null, { params: { status } }),
+    updateUserPassword: (id, password) => request.put(`/admin/users/${id}/password`, null, { params: { password } }),
+    updateUserRole: (id, role) => request.put(`/admin/users/${id}/role`, null, { params: { role } }),
     getVideos: (params) => request.get('/admin/videos', { params }),
     updateVideoStatus: (id, status) => request.put(`/admin/videos/${id}/status`, null, { params: { status } }),
-    createCategory: (name, description) => request.post('/admin/categories', null, { params: { name, description } })
+    getCategories: () => request.get('/admin/categories'),
+    createCategory: (name, description) => request.post('/admin/categories', null, { params: { name, description } }),
+    updateCategory: (id, params) => request.put(`/admin/categories/${id}`, null, { params }),
+    deleteCategory: (id) => request.delete(`/admin/categories/${id}`)
   }
 }

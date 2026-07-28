@@ -35,8 +35,11 @@
         <el-button type="primary" @click="$router.push('/admin/videos')">
           📹 视频管理
         </el-button>
+        <el-button type="primary" @click="$router.push('/admin/categories')">
+          📂 分类管理
+        </el-button>
         <el-button @click="showCategoryDialog = true">
-          ➕ 添加分类
+          ➕ 快速添加
         </el-button>
       </div>
     </div>
